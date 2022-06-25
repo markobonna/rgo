@@ -1,7 +1,9 @@
+import BuyInsurance from "../components/BuyInsurance";
+
 const UserPage = () => {
   return (
     <div>
-      <h1>Hello User</h1>
+      <BuyInsurance />
     </div>
   );
 };

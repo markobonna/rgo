@@ -3,24 +3,29 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^6.4.3",
     "@headlessui/react": "^1.6.5",
     "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@usedapp/core": "^1.0.14",
-    "framer-motion": "^6.3.15",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "react-toastify": "^9.0.5",
-    "tailwindcss": "^3.1.4",
-    "web-vitals": "^2.1.4",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "@truffle/contract": "^4.5.14",
+    "@usedapp/core": "^0.6.3",
+    "dotenv": "^16.0.1",
+    "framer-motion": "^5.6.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "^4.0.3",
+    "react-toastify": "^8.2.0",
+    "web-vitals": "^1.1.2",
     "web3modal": "^1.9.8"
   },
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -40,5 +45,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.3",
+    "@nomiclabs/hardhat-ganache": "^2.0.1",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "autoprefixer": "^9.8.8",
+    "chai": "^4.3.4",
+    "ethereum-waffle": "^3.4.4",
+    "ethers": "^5.5.2",
+    "postcss": "^7.0.39",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
   }
 }

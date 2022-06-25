@@ -1,10 +1,11 @@
 import "./App.css";
 import "./index.css";
 import AdminPage from "./pages/AdminPage";
+import WalletConnectButton from "./components/WalletConnectButton";
 import MetamaskConnectButton from "./components/MetamaskConnectButton";
 import { useEthers } from "@usedapp/core";
 import UserPage from "./pages/UserPage";
-import { ADMINADDRESS } from "./interactions";
+import { ADMINADDRESS } from "./Interactions";
 
 const App = () => {
   const { account } = useEthers();
@@ -17,6 +18,7 @@ const App = () => {
         <MetamaskConnectButton />
       </div>
       {account === adminAddress && <AdminPage />}
+
       {account !== adminAddress && account && <UserPage />}
       {!account && (
         <div className="flex justify-center">

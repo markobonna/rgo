@@ -12,7 +12,7 @@ const MetamaskConnectButton = () => {
         Disconnect Metamask Wallet
       </button>
       <h1 className="text-white bg-indigo-800 p-3 rounded-xl">
-        Hello, {account}
+        Welcome Metamask {account}
       </h1>
     </div>
   ) : (
