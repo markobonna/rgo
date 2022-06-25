@@ -1,7 +1,7 @@
 import "./App.css";
 import "./index.css";
-import PolygonMetamaskButton from "./components/PolygonMetamaskButton";
 import App from "./App";
+import WalletConnectButton from "./components/WalletConnectButton";
 
 const LandingPage = () => {
   return (
@@ -18,7 +18,10 @@ const LandingPage = () => {
             <br />
             If you have a wallet log into the DApp page at the top.
             <br />
-            Test metamask button here <App />
+            Test metamask button here
+            <br />
+            <App />
+            <WalletConnectButton />
           </h1>
         </div>
       </div>

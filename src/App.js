@@ -6,7 +6,6 @@ import MetamaskConnectButton from "./components/MetamaskConnectButton";
 import { useEthers } from "@usedapp/core";
 import UserPage from "./pages/UserPage";
 import { ADMINADDRESS } from "./Interactions";
-import WalletConnectProvider from "@walletconnect/web3-provider";
 
 const App = () => {
   const { account } = useEthers();
@@ -16,10 +15,10 @@ const App = () => {
   return (
     <div className="text-white">
       <div className="flex justify-end mt-5 mx-10">
+        <WalletConnectButton />
         <MetamaskConnectButton />
       </div>
       {account === adminAddress && <AdminPage />}
-
       {account !== adminAddress && account && <UserPage />}
       {!account && (
         <div className="flex justify-center">
