@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import { useContractFunction } from "@usedapp/core";
 import { Contract } from "@ethersproject/contracts";
-import ContractABI from "../artifacts/contracts/FlightDelayInsurance.sol/FlightDelayInsurance.json";
+import ContractABI from "../artifacts/contracts/RGOInsurance.sol/RGOInsurance.json";
 import { utils } from "ethers";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";

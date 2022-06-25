@@ -6,6 +6,7 @@ import MetamaskConnectButton from "./components/MetamaskConnectButton";
 import { useEthers } from "@usedapp/core";
 import UserPage from "./pages/UserPage";
 import { ADMINADDRESS } from "./Interactions";
+import WalletConnectProvider from "@walletconnect/web3-provider";
 
 const App = () => {
   const { account } = useEthers();
