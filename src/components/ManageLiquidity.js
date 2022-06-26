@@ -102,13 +102,13 @@ const ManageLiquidity = () => {
         <div className="bg-gray-700 rounded-lg w-max p-3 mt-5 m-auto">
           <h1 className="text-md">
             Available Contract Balance :{" "}
-            {parseFloat(contractBalance / Math.pow(10, 18))} ETH
+            {parseFloat(contractBalance / Math.pow(10, 18))} MATIC
           </h1>
         </div>
         <div className="bg-gray-700 rounded-lg w-max p-3 mt-5 m-auto">
           <h1 className="text-md">
             Locked Contract Balance :{" "}
-            {parseFloat(lockedContractBalance / Math.pow(10, 18))} ETH
+            {parseFloat(lockedContractBalance / Math.pow(10, 18))} MATIC
           </h1>
         </div>
       </div>
