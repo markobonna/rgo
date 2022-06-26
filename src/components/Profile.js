@@ -13,7 +13,7 @@ const client = new PrivyClient({
   session: session,
 });
 
-function Profile() {
+export default function Profile() {
   const [state, setState] = useState(null);
   const [firstInput, setFirstInput] = useState("");
   const [lastInput, setLastInput] = useState("");
@@ -30,7 +30,15 @@ function Profile() {
       if (!address) return;
 
       // Fetch user's information
-      const [firstName] = await client.get(address, [
+      const [
+        firstInput,
+        lastInput,
+        safetyInput,
+        carryInput,
+        stateInput,
+        typeInput,
+        serialInput,
+      ] = await client.get(address, [
         "first-name",
         "last-name",
         "safety-training",
@@ -43,6 +51,12 @@ function Profile() {
         ...state,
         userId: address,
         firstInput: firstInput?.text(),
+        lastInput: lastInput?.text(),
+        safetyInput: safetyInput?.text(),
+        carryInput: carryInput?.text(),
+        typeInput: typeInput?.text(),
+        serialInput: serialInput?.text(),
+        stateInput: stateInput?.text(),
       });
       setFirstInput(firstInput?.text());
       setLastInput(lastInput?.text());
@@ -61,6 +75,31 @@ function Profile() {
   useEffect(() => {
     fetchDataFromPrivy();
   }, []);
+
+  /* Connect to a MetaMask wallet */
+  const connectToWallet = async () => {
+    try {
+      const { ethereum } = window;
+
+      if (!ethereum) {
+        alert("Please install MetaMask for this demo: https://metamask.io/");
+        return;
+      }
+
+      await session.authenticate();
+      const userId = await session.address();
+      setState({
+        ...state,
+        userId: userId,
+      });
+
+      // After the wallet has been detected, we try to grab data from Privy if
+      // it exists
+      fetchDataFromPrivy();
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   /* Write the user's name and favorite color to Privy and personalizes the app */
   const submitDataToPrivy = async () => {
@@ -270,5 +309,3 @@ function Profile() {
     </div>
   );
 }
-
-export default Profile;
