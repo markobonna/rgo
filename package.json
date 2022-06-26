@@ -5,6 +5,7 @@
   "dependencies": {
     "@craco/craco": "^6.4.3",
     "@headlessui/react": "^1.6.5",
+    "@privy-io/privy-browser": "^0.0.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
