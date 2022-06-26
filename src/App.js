@@ -24,8 +24,9 @@ const App = () => {
         <div className="flex justify-center">
           <div className="bg-gray-800 p-8 rounded-3xl filter drop-shadow-xl text-center m-20 w-max">
             <h1 className="text-center font-bold text-xl">
-              Sign up here ____ or Connect your wallet to Buy Responsible Gun
-              Owner Insurance with (cryptocurrency available)!
+              RGO Social Impact Foundation
+              <br />
+              Healing Lives & Helping Survivors of Gun Violence
             </h1>
           </div>
         </div>

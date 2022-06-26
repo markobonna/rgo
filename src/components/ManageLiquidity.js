@@ -56,7 +56,7 @@ const ManageLiquidity = () => {
       <div className="bg-gray-800 p-8 rounded-3xl filter drop-shadow-xl text-center">
         <h1 className="text-center font-bold text-xl">Deposit Liquidity</h1>
         <input
-          placeholder="ETH"
+          placeholder="MATIC"
           ref={depositAmount}
           type="number"
           min="0"
@@ -78,7 +78,7 @@ const ManageLiquidity = () => {
         <h1 className="text-center font-bold text-xl">Withdraw Liquidity</h1>
         <input
           ref={withdrawAmount}
-          placeholder="ETH"
+          placeholder="MATIC"
           type="number"
           min="0"
           step="0.01"
